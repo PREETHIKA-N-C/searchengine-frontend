@@ -17,10 +17,10 @@ function Banner({bgImage,mainImage="",children,translateX=[0,0],translateY=[0,15
         expanded: false,
         children: (
           <div>
-          <div className="inset left">
+          <div className="left">
             <h1 className="headline white">KAAR</h1>
           </div>
-          <div className="inset right">
+          <div className="right">
             <h1 className="headline white">TECH</h1>
           </div>
           </div>

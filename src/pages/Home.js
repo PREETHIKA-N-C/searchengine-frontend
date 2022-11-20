@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { ParallaxProvider } from "react-scroll-parallax";
 import Banner from '../components/Banner';
 import Search from '../components/Search';
@@ -12,30 +12,31 @@ import SlideMain41 from '../assets/parallax-main51.png'
 import SlideMain42 from '../assets/parallax-main52.png'
 import SlideMain43 from '../assets/parallax-main53.png'
 import { Link, Button, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
-import { useEffect, useState } from 'react';
+import {  useState } from 'react';
 
 
 function Home() {
-    const [scrollPx,setScrollPx] = useState(0)
-    // setInterval(()=>{
-    //   console.log("hi")
-    //   scroll.scrollMore(753,{
-    //     duration: 1500,
-    // delay: 100,
-    // smooth: true,
-    //   });
-    //   setScrollPx(scrollPx+1)
-    //   console.log(scrollPx)
-    // },10000)
+    const [slideName,setSlideName] = useState(2)
 
-  // function checkReading (e) {
-  //   console.log(e)
-  //   if (checkReading.read) {
-  //     return;
-  //   }
-  //   checkReading.read = this.scrollHeight - this.scrollTop === this.clientHeight;
-  //   console.log(checkReading.read)
-  // }
+    useEffect(()=>{
+       setTimeout(()=>{
+        scroller.scrollTo(`slide${slideName}`,{
+          duration: 1500,
+      delay: 100,
+      smooth: true,
+        });
+        if(slideName <=4){
+          setSlideName(slideName+1)
+          console.log(slideName)
+        }
+        else{
+          setSlideName(1)
+          console.log(slideName)
+        }
+       },10000)
+    },[slideName])
+
+
   const foreground1= {
     image:SlideMain41,
     translateX: [0, 15],
@@ -59,26 +60,33 @@ function Home() {
   return (
     <ParallaxProvider >
 
-
     {/* slide 1 */}
-     <Banner bgImage={slideBg1} mainImage={SlideMain1}>
+    <Element name="slide1">
+     <Banner  bgImage={slideBg1} mainImage={SlideMain1}>
        <Header/>
        <Search/>
      </Banner>
- 
+     </Element>
+
     {/* slide 2 */}
-    <Banner bgImage={slideBg2} mainImage={SlideMain2} translateX={[0, 90]} translateY={[0,-21]} />
- 
+    <Element name="slide2" >
+    <Banner  bgImage="https://wallpaperaccess.com/full/391083.jpg" mainImage={SlideMain2} translateX={[0, 90]} translateY={[0,-21]} />
+    </Element>
+
     {/* slide 3 */}
-    <Banner bgImage="https://cdn.wallpapersafari.com/90/87/148nop.jpeg" foregrounds={[foreground1,foreground2,foreground3]} />
- 
+    <Element name="slide3" >
+    <Banner  bgImage="https://cdn.wallpapersafari.com/90/87/148nop.jpeg" foregrounds={[foreground1,foreground2,foreground3]} />
+    </Element>
+
     {/* slide 4 */}
-    <Banner bgImage="https://wallpaperaccess.com/full/338765.jpg" mainImage="https://s3-us-west-2.amazonaws.com/s.cdpn.io/105988/banner-foreground.png" />
+
+    <Element name="slide4" >
+    <Banner  bgImage="https://wallpaperaccess.com/full/338765.jpg" mainImage="https://s3-us-west-2.amazonaws.com/s.cdpn.io/105988/banner-foreground.png" />
+    </Element>
      
-     
-       <div className="center full">
+       <Element name="slide5"  className="center full">
          <h1 className="headline gray">KAAR TECH</h1>
-       </div>
+       </Element>
      </ParallaxProvider>
   )
 }
