@@ -1,0 +1,40 @@
+.searchContainer{
+    z-index: 200;
+    margin-top: 180px;
+    display: flex;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    position: fixed;
+    width: 100%;
+    height: 100px;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .inputDiv{
+    padding: 10px;
+    justify-content: center;
+    width: 500px;
+    height: 50px;
+    margin: 10px;
+  }
+  
+  .inputClass{
+      margin-left: 20px;
+      border: none;
+      outline: none;
+      background-color: antiquewhite;
+      width: 500px;
+      height: 30px;
+      font-size: x-large;
+      color: #000;
+      font-family: 'Aquatico', sans-serif;
+   
+  }
+  
+  .searchDiv{
+    background-color: antiquewhite;
+    width: 700px;
+    height: 70px;
+    border-radius: 50px;
+  }
