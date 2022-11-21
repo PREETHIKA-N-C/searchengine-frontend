@@ -1,7 +1,7 @@
 import React from 'react'
 import { ParallaxBanner } from "react-scroll-parallax";
 import './Banner.css'
-function Banner({bgImage,mainImage="",children,translateX=[0,0],translateY=[0,15],foregrounds=[{}]}) {
+function Banner({bgImage,mainImage="",children,translateX=[0,0],translateY=[0,15],foregrounds=[{}],headlineCss="altHeadlineContainer"}) {
     const background = {
         image:bgImage,
         translateY: [0, 50],
@@ -16,7 +16,7 @@ function Banner({bgImage,mainImage="",children,translateX=[0,0],translateY=[0,15
         shouldAlwaysCompleteAnimation: true,
         expanded: false,
         children: (
-          <div>
+          <div className={headlineCss}>
           <div className="left">
             <h1 className="headline white">KAAR</h1>
           </div>

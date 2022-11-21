@@ -5,9 +5,14 @@ import { useRef } from 'react';
 
 
 function App() {
-
+//   const disableScroll = () => {
+//     console.log("hi")
+//     document.addEventListener('wheel', this.preventDefault, {
+//       passive: false,
+//     })
+// }
   return (
-    <div>
+    <div >
     
     <Home/>
    

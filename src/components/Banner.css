@@ -3,8 +3,16 @@
     font-family: 'Aquire', sans-serif;
     /* font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; */
     font-weight: 100;
-    font-size: 10vw;
+    font-size: 7vw;
   }
+
+.headlineContainer{
+  margin-top: 115px;
+}
+
+.altHeadlineContainer{
+  margin-top: 25px;
+}
   
   .inset {
     position: absolute;
@@ -31,14 +39,12 @@
     display: flex;
     align-items: flex-start;
     margin-left: 300px;
-    margin-top: 60px;
   }
   .right{
     display: flex;
     align-items: flex-end;
     justify-content: end;
     margin-right: 300px;
-    margin-bottom: 140px;
   }
   
   .gradient {

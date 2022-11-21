@@ -17,7 +17,7 @@ import {  useState } from 'react';
 
 function Home() {
     const [slideName,setSlideName] = useState(2)
-
+    
     useEffect(()=>{
        setTimeout(()=>{
         scroller.scrollTo(`slide${slideName}`,{
@@ -62,7 +62,7 @@ function Home() {
 
     {/* slide 1 */}
     <Element name="slide1">
-     <Banner  bgImage={slideBg1} mainImage={SlideMain1}>
+     <Banner  bgImage={slideBg1} mainImage={SlideMain1} headlineCss="headlineContainer">
        <Header/>
        <Search/>
      </Banner>
