@@ -3,7 +3,7 @@ body {
   padding: 0;
   margin: 0;
   height: 200vh;
-  background: #000;
+  background: #171717;
 }
 
 .element {
@@ -21,5 +21,14 @@ body {
 
 .active {
   color: red !important;
+}
+
+.parallax_cont{
+  margin-left: 70px;
+  margin-top: 50px;
+  width: 100%;
+  height: 500px;
+  border-radius: 10px;
+  /* overflow: hidden; */
 }
 

@@ -1,12 +1,16 @@
 import React from 'react'
 import './Header.css'
+import logo from '../assets/Digiverz.png'
+import logo2 from '../assets/Digiverz_B.png'
 function Header() {
   return (
     <div>
         
     <header class="site-header">
   <div class="site-identity">
-    <h1><a className='aLink' href=""> D I G I V E R S E </a></h1>
+    <h1><a className='aLink' href=""> 
+    <img src={logo2} alt="logo" width={150} height={50}/>
+    </a></h1>
   </div>  
   <nav class="site-navigation">
     <ul class="nav">

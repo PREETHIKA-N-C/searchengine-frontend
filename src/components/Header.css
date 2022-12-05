@@ -1,11 +1,19 @@
+/* @import url('https://fonts.cdnfonts.com/css/aquatico');
+@import url('https://fonts.cdnfonts.com/css/nordic');
+@import url('https://fonts.cdnfonts.com/css/aquire'); */
+@font-face{
+    font-family:aquatico;
+    font-style:normal;
+    font-weight:400;
+    src:local('Aquatico'),
+    url('../assets/Aquatico-Regular.woff') format('woff')
+}
 .aLink {
     text-decoration: none;
     color: white;
   }
   .site-header { 
     z-index: 200;
-    /* background-color: antiquewhite; */
-    /* border-bottom: 1px solid #ccc; */
     padding: .5em 1em;
     display: flex;
     position: fixed;
@@ -27,7 +35,8 @@
   
   .site-navigation ul, 
   .site-navigation li {
-    margin: 0; 
+    margin: 5px; 
+    font-family: 'Aquatico', sans-serif;
     padding: 0;
   }
   
