@@ -18,10 +18,10 @@ function Banner({bgImage,mainImage="",children,translateX=[0,0],translateY=[0,15
         children: (
           <div className={headlineCss}>
           <div className="left">
-            <h1 className="headline white">KAAR</h1>
+            {/* <h1 className="headline white">KAAR</h1> */}
           </div>
           <div className="right">
-            <h1 className="headline white">TECH</h1>
+            {/* <h1 className="headline white">TECH</h1> */}
           </div>
           </div>
         )
