@@ -13,10 +13,10 @@ function App() {
 //     })
 // }
   return (
-    <div >
+    <>
     {/* <Home/> */}
     <Explore />
-  </div>
+  </>
   );
 }
 

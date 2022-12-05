@@ -109,15 +109,18 @@
 }
 
 
-.thumbnail .keen-slider__slide:hover{
+/* .thumbnail .keen-slider__slide:hover{
   box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
-}
+} */
 
 
 .slider_cont{
-  padding-left: 70px;
+  /* padding-left: 70px; */
+  /* margin-left: 70px;
   padding-top: 50px;
-  height: 450px;
+  height: 450px; */
+  display: flex;
+    height: 550px;
 }
 
 .keen-slider-cont{
@@ -132,7 +135,7 @@
     -webkit-user-select: none;
     user-select: none;
     -khtml-user-select: none;
-    width: 95%;
+    width: 100%;
     position: absolute;
 }
 

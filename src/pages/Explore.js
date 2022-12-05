@@ -13,15 +13,14 @@ function Explore() {
     //     {/* <Gallery/> */}
         
     // </div>
-
-    <div>
+    <>
         <SideDrawer />
         {/* <SkeletonLoader />   */}
         {/* <Home /> */}
-        {/* <Gallery/> */}
+       
         <SliderThumbnail/>
-    </div>
-    
+         <Gallery/>
+        </>
   )
 }
 
