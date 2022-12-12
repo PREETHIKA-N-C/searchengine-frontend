@@ -1,6 +1,7 @@
 /* @import url('https://fonts.cdnfonts.com/css/aquatico');
 @import url('https://fonts.cdnfonts.com/css/nordic');
 @import url('https://fonts.cdnfonts.com/css/aquire'); */
+/* @import url('https://fonts.cdnfonts.com/css/silver-crown'); */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -12,13 +13,57 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #202529f6;
+  /* overflow-y: hidden; */
   
+}
+@font-face{
+  font-family:aquatico;
+  font-style:normal;
+  font-weight:400;
+  src:local('Aquatico'),
+  url('./assets/Aquatico-Regular.woff') format('woff')
+}
+@font-face{
+  font-family:aquire;
+  font-style:normal;
+  font-weight:400;
+  src:local('Aquire'),url('./assets/Aquire-BW0ox.woff') format('woff')
+}
+@font-face {
+  font-family: 'SILVER CROWN';
+  font-style: normal;
+  font-weight: 400;
+  src: local('SILVER CROWN'), url('./assets/SILVER\ CROWN.woff') format('woff');
+}
+@font-face {
+  font-family: 'Ikaros-Regular';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Ikaros-Regular'), url('./assets/Ikaros-Light.otf') format('otf');
 }
 
 body::-webkit-scrollbar {
   display: none;
 }
+.scroll-hide::-webkit-scrollbar {
+  display: none;
+}
 
+@keyframes shine {
+	to {
+		background-position: right -40px top 0;
+	}
+}
+
+.skull-Load{
+  background: #50535a;
+  background-image: linear-gradient(to right, #50535a 0%, #656871 20%, #50535a 40%, #50535a 100%);
+    background-size: 40px 100%; 
+	background-repeat: no-repeat; 
+	background-position: left -40px top 0; 
+	animation: shine 1s ease infinite;
+}
 /* code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;

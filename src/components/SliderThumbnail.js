@@ -5,6 +5,18 @@ import "keen-slider/keen-slider.min.css"
 
 function ThumbnailPlugin(mainRef) {
     return (slider) => {
+      // let timeout
+      //   let mouseOver = false
+      //   function clearNextTimeout() {
+      //     clearTimeout(timeout)
+      //   }
+      //   function nextTimeout() {
+      //     clearTimeout(timeout)
+      //     if (mouseOver) return
+      //     timeout = setTimeout(() => {
+      //       slider.next()
+      //     }, 2000)
+      //   }
       function removeActive() {
         slider.slides.forEach((slide) => {
           slide.classList.remove("active")
@@ -32,15 +44,57 @@ function ThumbnailPlugin(mainRef) {
           addActive(main.track.absToRel(next))
           slider.moveToIdx(Math.min(slider.track.details.maxIdx, next))
         })
+        // slider.container.addEventListener("mouseover", () => {
+        //   mouseOver = true
+        //   clearNextTimeout()
+        // })
+        // slider.container.addEventListener("mouseout", () => {
+        //   mouseOver = false
+        //   nextTimeout()
+        // })
+        // nextTimeout()
       })
+      // slider.on("dragStarted", clearNextTimeout)
+      //   slider.on("animationEnded", nextTimeout)
+      //   slider.on("updated", nextTimeout)
     }
   }
 
 function SliderThumbnail() {
-    const [opacities, setOpacities] = React.useState([])
+    // const [opacities, setOpacities] = React.useState([])
     const [sliderRef, instanceRef] = useKeenSlider({
         initial: 0,
-      })
+        loop: true,
+      },[
+        (slider) => {
+          let timeout
+          let mouseOver = false
+          function clearNextTimeout() {
+            clearTimeout(timeout)
+          }
+          function nextTimeout() {
+            clearTimeout(timeout)
+            if (mouseOver) return
+            timeout = setTimeout(() => {
+              slider.next()
+            }, 10000)
+          }
+          slider.on("created", () => {
+            slider.container.addEventListener("mouseover", () => {
+              mouseOver = true
+              clearNextTimeout()
+            })
+            slider.container.addEventListener("mouseout", () => {
+              mouseOver = false
+              nextTimeout()
+            })
+            nextTimeout()
+          })
+          slider.on("dragStarted", clearNextTimeout)
+          slider.on("animationEnded", nextTimeout)
+          slider.on("updated", nextTimeout)
+        },
+      ])
       const [thumbnailRef] = useKeenSlider(
         {
           initial: 0,
@@ -49,15 +103,12 @@ function SliderThumbnail() {
             spacing: 10,
           },
           loop: true,
-          detailsChanged(s) {
-      const new_opacities = s.track.details.slides.map((slide) => slide.portion)
-      setOpacities(new_opacities)
-    },
         },
         [ThumbnailPlugin(instanceRef)]
       )
     
       return (
+        
         <div className='slider_cont '>
           <div ref={sliderRef} className="keen-slider-cont ">
             <div className="keen-slider__slide number-slide1">1</div>

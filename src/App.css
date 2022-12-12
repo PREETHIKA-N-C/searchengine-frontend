@@ -2,8 +2,9 @@ html,
 body {
   padding: 0;
   margin: 0;
-  height: 200vh;
-  background: #171717;
+  /* background: #171717; */
+  /* background-color: #24292edc; */
+  
 }
 
 .element {

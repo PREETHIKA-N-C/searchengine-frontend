@@ -14,8 +14,9 @@
     height: 400px;
     padding-left: 50px;
     padding-top: 60px;
-    background-color: #171717;
-}
+    /* background-color: #171717; */
+    /* background-color: #24292edc;*/
+} 
 
 
 
@@ -24,18 +25,17 @@
     margin-left: 30px;
     flex:0.3;
     height: 390px;
-    border: 2px solid rgb(35, 32, 32);
+    border: 1px solid #303030;
     border-radius: 10px;
-    background-color: #393838;
-    
+    background-color: #242a30dc;
 }
 
 .product_cont:hover{
     -webkit-box-shadow: 40px 2px 68px -45px rgba(57,66,77,0.55);
     -moz-box-shadow: 40px 2px 68px -45px rgba(57,66,77,0.55);
     box-shadow: 40px 2px 68px -45px rgba(57,66,77,0.55);
-    transform: scale(0.95);
-    transition: transform 1s ;
+    transform: translateY(-3px);
+    transition: transform 0.2s ease-in;
 }
 
 
@@ -102,10 +102,10 @@
     background-size: contain;
     background-repeat: no-repeat;
     background-position: 20%;
-    background-color: #393838;
+    background-color: #242a30dc;
     width:90%;
     height: 190px;
-    border: 2px solid rgb(35, 32, 32);
+    border: 1px solid #303030;
     /* margin-top: 10px; */
     margin-bottom: 10px;
     /* margin-left: 30px;
@@ -117,6 +117,7 @@
     -webkit-box-shadow: 40px 2px 68px -45px rgba(57,66,77,0.55);
     -moz-box-shadow: 40px 2px 68px -45px rgba(57,66,77,0.55);
     box-shadow: 40px 2px 68px -45px rgba(57,66,77,0.55);
-    transform: scale(0.95);
-    transition: transform 1s ;
+    /* transform: scale(0.95); */
+    transform: translateY(-3px);
+    transition: transform 0.2s ease-in ;
 }
