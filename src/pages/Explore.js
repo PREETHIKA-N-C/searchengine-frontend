@@ -22,8 +22,8 @@ function Explore() {
     <>
         {/* <SideDrawer />
         {load ? <Product/>:<ProductSkullLoader />} */}
-        <SideDrawer />
-        <SliderThumbnail/>
+        {/* <SideDrawer /> */}
+        {/* <SliderThumbnail/> */}
         {load ? <Gallery/>:<SkeletonLoader /> } 
         {/* <Home /> */}
        

@@ -40,6 +40,14 @@
     padding: 0px;
 }
 
+.icon_cont.active{
+    background-color: rgba(190, 187, 187, 0.114);
+    /* background-color: rgba(120, 116, 116, 0.666); */
+    border: 10px solid transparent;
+    border-image: url('../assets/border.png') 60 stretch;
+    padding: 0px;
+}
+
 
 .top_cont{
     margin-top: 50px;

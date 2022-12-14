@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Style from './SideDrawer.module.css'
 import { FiHome,FiGrid,FiCompass,FiHelpCircle,FiSettings,FiSearch } from "react-icons/fi";
 // import SearchSharpIcon from '@mui/icons-material/SearchSharp';
@@ -8,7 +8,12 @@ import { defineElement} from 'lord-icon-element';
 import { Player, Controls } from "@lottiefiles/react-lottie-player";
 import compass from '../assets/compass.json'
 import grid from '../assets/Grid and List.json'
+import {NavLink} from 'react-router-dom'
+
+
 function SideDrawer() {
+
+  const [linkState,setLinkState] = useState()
 
 defineElement(lottie.loadAnimation);
   return (
@@ -28,6 +33,12 @@ defineElement(lottie.loadAnimation);
     </div>
     <div className={Style.container}>
     <div className={Style.top_cont}>
+      <NavLink to="/" isActive={(match, location) => {
+    if (!match) {
+      return false;
+    }
+    console.log(match,location)
+  }} > 
     <div className={Style.icon_cont}>
     {/* <FiHome className={Style.icon} /> */}
     <lord-icon
@@ -37,6 +48,8 @@ defineElement(lottie.loadAnimation);
 </lord-icon>
     <h6 className={Style.text_2}>Home</h6>
     </div>
+    </NavLink>
+    <NavLink to="/Product">
     <div className={Style.icon_cont}>
     {/* <FiGrid className={Style.icon} /> */}
     {/* <Player
@@ -52,6 +65,9 @@ defineElement(lottie.loadAnimation);
     colors="primary:#ffffff" style={{width:"23px",height:"23px",marginLeft:"7px"}}></lord-icon>
     <h6 className={Style.text_2}>App</h6>
     </div>
+    </NavLink>
+
+    <NavLink to="/Explore">
     <div className={Style.icon_cont}>
     {/* <FiCompass className={Style.icon} /> */}
     <Player
@@ -63,7 +79,7 @@ defineElement(lottie.loadAnimation);
       </Player>
     <h6 className={Style.text_2}>Explore</h6>
     </div>  
-        
+    </NavLink>
     </div>
     <div className={Style.bottom_cont}>
     <div className={Style.icon_cont}>

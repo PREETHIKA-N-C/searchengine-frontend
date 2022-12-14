@@ -3,6 +3,9 @@ import { Link, Button, Element, Events, animateScroll as scroll, scrollSpy, scro
 import Home from './pages/Home';
 import { useRef } from 'react';
 import Explore from './pages/Explore';
+import Product from './pages/Product';
+import {BrowserRouter,Route,Routes} from 'react-router-dom';
+import SideDrawer from './components/SideDrawer';
 
 
 function App() {
@@ -14,8 +17,15 @@ function App() {
 // }
   return (
     <>
-    {/* <Home/> */}
-    <Explore />
+    <BrowserRouter>
+    <SideDrawer/>
+    <Routes>
+    <Route path="/" element={<Home/>}/>
+    <Route path="Explore" element={<Explore/>} />
+    <Route path="Product" element={<Product/>} />
+    </Routes>
+    
+    </BrowserRouter>
   </>
   );
 }

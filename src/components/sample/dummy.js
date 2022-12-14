@@ -1,0 +1,52 @@
+const data = [
+    {
+        id:"1",
+        name:"lawatlas-emergency-declarations",
+        imgUrl:'../../images/not-found.png',
+        summary:"",
+},
+{
+    id:"2",
+    name:"mobility",
+    imgUrl:"https://www.mckinsey.com/~/media/mckinsey/industries/automotive%20and%20assembly/our%20insights/the%20future%20of%20mobility%20is%20at%20our%20doorstep/the-future-of-mobility-5050-1536x1536.jpg",
+    summary:"",
+},
+{
+    id:"3",
+    name:"hospitalizations",
+    imgUrl:"../../images/not-found.png",
+    summary:"",
+},
+{
+    id:"4",
+    name:"vaccinations",
+    imgUrl:"https://www.who.int/health-topics/vaccines-and-immunization",
+    summary:"",
+},
+{
+    id:"5",
+    name:"weather",
+    imgUrl:"../../images/not-found.png",
+    summary:"",
+},
+{
+    id:"6",
+    name:"epidemiology",
+    imgUrl:"../../images/not-found.png",
+    summary:"",
+},
+{
+    id:"6",
+    name:"health",
+    imgUrl:"../../images/not-found.png",
+    summary:"",
+},
+{
+    id:"6",
+    name:"demographics",
+    imgUrl:"../../images/not-found.png",
+    summary:"",
+},
+]
+
+export default data;
