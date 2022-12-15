@@ -4,7 +4,7 @@ import { FiCodesandbox,FiCalendar,FiBookmark,FiFileText } from "react-icons/fi";
 function ProductComp() {
     
   return (
-   <div className='flex pl-[90px] pt-[70px] pr-[20px] pb-[20px] space-x-2  h-[650px] overflow-hidden' >
+   <div className='flex pl-[90px] pt-[70px] pr-[20px] pb-[20px] space-x-2  h-[615px] overflow-hidden' >
         
         <div className='flex flex-[0.3] border-[1px] border-[#303030] rounded-[10px] bg-[#242a30dc] flex-col items-center'>
         <img src='https://upload.wikimedia.org/wikipedia/commons/0/0c/Clash_app_logo.png' className='w-[130px] h-[130px] rounded-[10px] mt-16'/>
@@ -23,7 +23,7 @@ function ProductComp() {
         <p>Customers</p>
     </div>
         </div>
-        <div className='fixed mt-[515px] ml-[315px] hover:bg-[#ffffff3a] w-8 h-8 p-1 rounded-[4px]'>
+        <div className='fixed mt-[490px] ml-[300px] hover:bg-[#ffffff3a] w-8 h-8 p-1 rounded-[4px]'>
         <lord-icon src="https://cdn.lordicon.com/wxhtpnnk.json" trigger="morph" colors="primary:#A6A5A5" style={{width:"25px",height:"25px"}}></lord-icon>
         </div>
         </div>

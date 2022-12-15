@@ -1,6 +1,6 @@
 import React from "react";
 import "./Nav.css";
-import Digiverz from "../images/Digiverz_B.png";
+import Digiverz from "../assets/Digiverz_L.png";
 
 function Nav({ children }) {
   return (

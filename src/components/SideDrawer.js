@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Style from './SideDrawer.module.css'
 import { FiHome,FiGrid,FiCompass,FiHelpCircle,FiSettings,FiSearch } from "react-icons/fi";
 // import SearchSharpIcon from '@mui/icons-material/SearchSharp';
@@ -13,8 +13,8 @@ import {NavLink} from 'react-router-dom'
 
 function SideDrawer() {
 
-  const [linkState,setLinkState] = useState()
-
+  const [linkState,setLinkState] = useState("")
+ 
 defineElement(lottie.loadAnimation);
   return (
     <div>
@@ -24,8 +24,8 @@ defineElement(lottie.loadAnimation);
     <div className='pt-[3px]'>
     {/* <FiSearch  className={Style.icon}/>  */}
     <lord-icon src="https://cdn.lordicon.com/xfftupfv.json" colors="primary:#ffffff" trigger="morph"></lord-icon>
-    
-    </div>   
+   
+    </div>  
     <input placeholder='Search...' className='outline-none h-[100%] w-[100%] bg-[#212637e3] ml-2 font-[Aquire] text-white text-lg'/> </div>
     <div className={Style.profile}>
         <h6>HK</h6>
@@ -33,13 +33,8 @@ defineElement(lottie.loadAnimation);
     </div>
     <div className={Style.container}>
     <div className={Style.top_cont}>
-      <NavLink to="/" isActive={(match, location) => {
-    if (!match) {
-      return false;
-    }
-    console.log(match,location)
-  }} > 
-    <div className={Style.icon_cont}>
+      <NavLink to="/"  className={(state) => state.isActive ? setLinkState("Home"):""}> 
+    <div className={linkState ==="Home"? Style.icon_cont_active :Style.icon_cont } >
     {/* <FiHome className={Style.icon} /> */}
     <lord-icon
     src="https://cdn.lordicon.com/osuxyevn.json"
@@ -49,8 +44,8 @@ defineElement(lottie.loadAnimation);
     <h6 className={Style.text_2}>Home</h6>
     </div>
     </NavLink>
-    <NavLink to="/Product">
-    <div className={Style.icon_cont}>
+    <NavLink to="/Product" className={(state) => state.isActive ? setLinkState("Product"):""}>
+    <div className={linkState ==="Product"? Style.icon_cont_active :Style.icon_cont } >
     {/* <FiGrid className={Style.icon} /> */}
     {/* <Player
         hover
@@ -67,8 +62,8 @@ defineElement(lottie.loadAnimation);
     </div>
     </NavLink>
 
-    <NavLink to="/Explore">
-    <div className={Style.icon_cont}>
+    <NavLink to="/Explore" className={(state) => state.isActive ? setLinkState("Explore"):""}>
+    <div className={linkState ==="Explore"? Style.icon_cont_active :Style.icon_cont } >
     {/* <FiCompass className={Style.icon} /> */}
     <Player
         hover
@@ -80,6 +75,26 @@ defineElement(lottie.loadAnimation);
     <h6 className={Style.text_2}>Explore</h6>
     </div>  
     </NavLink>
+
+
+    <NavLink to="/MarketPlaceHome" className={(state) => state.isActive ? setLinkState("Market"):""}>
+    <div className={linkState ==="Market"? Style.icon_cont_active :Style.icon_cont } >
+    {/* <FiGrid className={Style.icon} /> */}
+    {/* <Player
+        hover
+        speed={3}
+        src={grid}
+        style={{ height: "30px", width: "35px",marginLeft:'2px' }}
+      >
+      </Player> */}
+      <lord-icon
+    src="https://cdn.lordicon.com/icxqolmx.json"
+    trigger="hover"
+    colors="primary:#ffffff" style={{width:"23px",height:"23px",marginLeft:"7px"}}></lord-icon>
+    <h6 className={Style.text_2}>Market</h6>
+    </div>
+    </NavLink>
+   
     </div>
     <div className={Style.bottom_cont}>
     <div className={Style.icon_cont}>

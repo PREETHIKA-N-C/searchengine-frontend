@@ -1,7 +1,7 @@
 import React from 'react'
 import PipelineCard from './PipelineCard';
 
-import IMAGE_NOT_FOUND from '../../images/not-found.png'
+// import IMAGE_NOT_FOUND from '../../assets/not-found.png'
 import data from '../sample/dummy'
 function PipelinesGrid({result}) {
     return (

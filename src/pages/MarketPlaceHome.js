@@ -1,12 +1,12 @@
 import React, { useState } from "react";
-import PipelinesGrid from "../Components/Card/PipelinesGrid";
-import MainPageLayout from "../Components/MainPageLayout";
+import PipelinesGrid from "../components/Card/PipelinesGrid";
+import MainPageLayout from "../components/MainPageLayout";
 import {
   RadioInputsWrapper,
   SearchButtonWrapper,
   SearchInput,
-} from "./Home.Styled";
-import "./Home.css";
+} from "./MarketPlaceHome.Styled";
+import "./MarketPlaceHome.css";
 import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
 import Typography from "@mui/material/Typography";
@@ -32,7 +32,7 @@ function TabPanel(props) {
   );
 }
 
-function Home() {
+function MarketPlaceHome() {
   const [value, setvalue] = React.useState(0);
   const handleChange = (event, newValue) => {
     setvalue(newValue);
@@ -127,4 +127,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default MarketPlaceHome;

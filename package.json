@@ -3,11 +3,15 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@emotion/react": "^11.10.5",
+    "@emotion/styled": "^11.10.5",
     "@lottiefiles/react-lottie-player": "^3.5.0",
     "@mui/icons-material": "^5.10.16",
+    "@mui/material": "^5.10.17",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+    "export-from-json": "^1.7.0",
     "feather-icons": "^4.29.0",
     "keen-slider": "^6.8.5",
     "lord-icon-element": "^4.0.1",
@@ -22,6 +26,7 @@
     "react-scroll": "^1.8.8",
     "react-scroll-parallax": "^3.3.2",
     "react-spring-lightbox": "^1.7.1",
+    "react-switch": "^7.0.0",
     "web-vitals": "^2.1.4"
   },
   "scripts": {

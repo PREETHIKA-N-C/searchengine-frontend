@@ -1,11 +1,11 @@
 import React, { useState } from "react";
-import MainPageLayout from "../Components/MainPageLayout";
+import MainPageLayout from "../components/MainPageLayout";
 import { CiShare1 } from "react-icons/ci";
 import "./pipilines.css";
-import data from "../Components/sample/dummy";
+import data from "../components/sample/dummy";
 import { useNavigate, useParams } from "react-router-dom";
 import axios, * as others from "axios";
-import CsvDownloadButton from "react-json-to-csv";
+// import CsvDownloadButton from "react-json-to-csv";
 import exportFromJSON from "export-from-json";
 
 function Pipelines() {

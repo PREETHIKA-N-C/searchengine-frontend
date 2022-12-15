@@ -1,6 +1,6 @@
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
-import IMAGE_NOT_FOUND from "../../images/not-found.png";
+import IMAGE_NOT_FOUND from "../../assets/not-found.png";
 function PipelineCard({ id, image, name, summary }) {
   const navigate = useNavigate();
 
